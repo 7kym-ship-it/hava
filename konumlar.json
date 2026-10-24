@@ -1,0 +1,734 @@
+{
+ "surum": 1,
+ "konumlar": [
+  {
+   "ad": "Adana",
+   "slug": "adana",
+   "lat": 36.9862,
+   "lon": 35.3253,
+   "tur": "il",
+   "bulunan": "Adana",
+   "bagli_il": "Adana"
+  },
+  {
+   "ad": "Adıyaman",
+   "slug": "adiyaman",
+   "lat": 37.7644,
+   "lon": 38.2763,
+   "tur": "il",
+   "bulunan": "Adıyaman",
+   "bagli_il": "Adıyaman"
+  },
+  {
+   "ad": "Afyonkarahisar",
+   "slug": "afyonkarahisar",
+   "lat": 38.7567,
+   "lon": 30.5433,
+   "tur": "il",
+   "bulunan": "Afyonkarahisar",
+   "bagli_il": "Afyonkarahisar"
+  },
+  {
+   "ad": "Ağrı",
+   "slug": "agri",
+   "lat": 39.7147,
+   "lon": 43.0401,
+   "tur": "il",
+   "bulunan": "Ağrı",
+   "bagli_il": "Ağrı"
+  },
+  {
+   "ad": "Aksaray",
+   "slug": "aksaray",
+   "lat": 38.3725,
+   "lon": 34.0254,
+   "tur": "il",
+   "bulunan": "Aksaray",
+   "bagli_il": "Aksaray"
+  },
+  {
+   "ad": "Amasya",
+   "slug": "amasya",
+   "lat": 40.6533,
+   "lon": 35.8331,
+   "tur": "il",
+   "bulunan": "Amasya",
+   "bagli_il": "Amasya"
+  },
+  {
+   "ad": "Ankara",
+   "slug": "ankara",
+   "lat": 39.9199,
+   "lon": 32.8543,
+   "tur": "il",
+   "bulunan": "Ankara",
+   "bagli_il": "Ankara"
+  },
+  {
+   "ad": "Antalya",
+   "slug": "antalya",
+   "lat": 36.9081,
+   "lon": 30.6956,
+   "tur": "il",
+   "bulunan": "Antalya",
+   "bagli_il": "Antalya"
+  },
+  {
+   "ad": "Ardahan",
+   "slug": "ardahan",
+   "lat": 41.1087,
+   "lon": 42.7022,
+   "tur": "il",
+   "bulunan": "Ardahan",
+   "bagli_il": "Ardahan"
+  },
+  {
+   "ad": "Artvin",
+   "slug": "artvin",
+   "lat": 41.1816,
+   "lon": 41.8217,
+   "tur": "il",
+   "bulunan": "Artvin",
+   "bagli_il": "Artvin"
+  },
+  {
+   "ad": "Aydın",
+   "slug": "aydin",
+   "lat": 37.845,
+   "lon": 27.8396,
+   "tur": "il",
+   "bulunan": "Aydın",
+   "bagli_il": "Aydın"
+  },
+  {
+   "ad": "Balıkesir",
+   "slug": "balikesir",
+   "lat": 39.6492,
+   "lon": 27.8861,
+   "tur": "il",
+   "bulunan": "Balıkesir",
+   "bagli_il": "Balıkesir"
+  },
+  {
+   "ad": "Bartın",
+   "slug": "bartin",
+   "lat": 41.6358,
+   "lon": 32.3375,
+   "tur": "il",
+   "bulunan": "Bartın",
+   "bagli_il": "Bartın"
+  },
+  {
+   "ad": "Batman",
+   "slug": "batman",
+   "lat": 37.8874,
+   "lon": 41.1322,
+   "tur": "il",
+   "bulunan": "Batman",
+   "bagli_il": "Batman"
+  },
+  {
+   "ad": "Bayburt",
+   "slug": "bayburt",
+   "lat": 40.2563,
+   "lon": 40.2229,
+   "tur": "il",
+   "bulunan": "Bayburt",
+   "bagli_il": "Bayburt"
+  },
+  {
+   "ad": "Bilecik",
+   "slug": "bilecik",
+   "lat": 40.1419,
+   "lon": 29.9793,
+   "tur": "il",
+   "bulunan": "Bilecik",
+   "bagli_il": "Bilecik"
+  },
+  {
+   "ad": "Bingöl",
+   "slug": "bingol",
+   "lat": 38.8847,
+   "lon": 40.4939,
+   "tur": "il",
+   "bulunan": "Bingöl",
+   "bagli_il": "Bingöl"
+  },
+  {
+   "ad": "Bitlis",
+   "slug": "bitlis",
+   "lat": 38.4012,
+   "lon": 42.1078,
+   "tur": "il",
+   "bulunan": "Bitlis",
+   "bagli_il": "Bitlis"
+  },
+  {
+   "ad": "Bolu",
+   "slug": "bolu",
+   "lat": 40.7358,
+   "lon": 31.6061,
+   "tur": "il",
+   "bulunan": "Bolu",
+   "bagli_il": "Bolu"
+  },
+  {
+   "ad": "Burdur",
+   "slug": "burdur",
+   "lat": 37.7203,
+   "lon": 30.2908,
+   "tur": "il",
+   "bulunan": "Burdur",
+   "bagli_il": "Burdur"
+  },
+  {
+   "ad": "Bursa",
+   "slug": "bursa",
+   "lat": 40.1956,
+   "lon": 29.0601,
+   "tur": "il",
+   "bulunan": "Bursa",
+   "bagli_il": "Bursa İli"
+  },
+  {
+   "ad": "Çanakkale",
+   "slug": "canakkale",
+   "lat": 40.1555,
+   "lon": 26.4127,
+   "tur": "il",
+   "bulunan": "Çanakkale",
+   "bagli_il": "Çanakkale"
+  },
+  {
+   "ad": "Çankırı",
+   "slug": "cankiri",
+   "lat": 40.5999,
+   "lon": 33.6153,
+   "tur": "il",
+   "bulunan": "Çankırı",
+   "bagli_il": "Çankırı"
+  },
+  {
+   "ad": "Çorum",
+   "slug": "corum",
+   "lat": 40.5489,
+   "lon": 34.9533,
+   "tur": "il",
+   "bulunan": "Çorum",
+   "bagli_il": "Çorum"
+  },
+  {
+   "ad": "Denizli",
+   "slug": "denizli",
+   "lat": 37.7742,
+   "lon": 29.0875,
+   "tur": "il",
+   "bulunan": "Denizli",
+   "bagli_il": "Denizli"
+  },
+  {
+   "ad": "Diyarbakır",
+   "slug": "diyarbakir",
+   "lat": 37.9136,
+   "lon": 40.2172,
+   "tur": "il",
+   "bulunan": "Diyarbakır",
+   "bagli_il": "Diyarbakır"
+  },
+  {
+   "ad": "Düzce",
+   "slug": "duzce",
+   "lat": 40.8389,
+   "lon": 31.1639,
+   "tur": "il",
+   "bulunan": "Düzce",
+   "bagli_il": "Düzce"
+  },
+  {
+   "ad": "Edirne",
+   "slug": "edirne",
+   "lat": 41.6772,
+   "lon": 26.556,
+   "tur": "il",
+   "bulunan": "Edirne",
+   "bagli_il": "Edirne"
+  },
+  {
+   "ad": "Elazığ",
+   "slug": "elazig",
+   "lat": 38.6743,
+   "lon": 39.2232,
+   "tur": "il",
+   "bulunan": "Elâzığ",
+   "bagli_il": "Elazığ"
+  },
+  {
+   "ad": "Erzincan",
+   "slug": "erzincan",
+   "lat": 39.7392,
+   "lon": 39.4901,
+   "tur": "il",
+   "bulunan": "Erzincan",
+   "bagli_il": "Erzincan"
+  },
+  {
+   "ad": "Erzurum",
+   "slug": "erzurum",
+   "lat": 39.9086,
+   "lon": 41.2769,
+   "tur": "il",
+   "bulunan": "Erzurum",
+   "bagli_il": "Erzurum"
+  },
+  {
+   "ad": "Eskişehir",
+   "slug": "eskisehir",
+   "lat": 39.7767,
+   "lon": 30.5206,
+   "tur": "il",
+   "bulunan": "Eskişehir",
+   "bagli_il": "Eskişehir"
+  },
+  {
+   "ad": "Gaziantep",
+   "slug": "gaziantep",
+   "lat": 37.0594,
+   "lon": 37.3825,
+   "tur": "il",
+   "bulunan": "Gaziantep",
+   "bagli_il": "Gaziantep"
+  },
+  {
+   "ad": "Giresun",
+   "slug": "giresun",
+   "lat": 40.917,
+   "lon": 38.3874,
+   "tur": "il",
+   "bulunan": "Giresun",
+   "bagli_il": "Giresun"
+  },
+  {
+   "ad": "Gümüşhane",
+   "slug": "gumushane",
+   "lat": 40.46,
+   "lon": 39.4718,
+   "tur": "il",
+   "bulunan": "Gümüşhane",
+   "bagli_il": "Gümüşhane"
+  },
+  {
+   "ad": "Hakkâri",
+   "slug": "hakkari",
+   "lat": 37.5744,
+   "lon": 43.7408,
+   "tur": "il",
+   "bulunan": "Hakkari",
+   "bagli_il": "Hakkâri"
+  },
+  {
+   "ad": "Hatay",
+   "slug": "hatay",
+   "lat": 36.2066,
+   "lon": 36.1572,
+   "tur": "il",
+   "bulunan": "Antakya",
+   "bagli_il": "Hatay"
+  },
+  {
+   "ad": "Iğdır",
+   "slug": "igdir",
+   "lat": 39.9237,
+   "lon": 44.045,
+   "tur": "il",
+   "bulunan": "Iğdır",
+   "bagli_il": "Iğdır"
+  },
+  {
+   "ad": "Isparta",
+   "slug": "isparta",
+   "lat": 37.7644,
+   "lon": 30.5522,
+   "tur": "il",
+   "bulunan": "Isparta",
+   "bagli_il": "Isparta"
+  },
+  {
+   "ad": "İstanbul",
+   "slug": "istanbul",
+   "lat": 41.0138,
+   "lon": 28.9497,
+   "tur": "il",
+   "bulunan": "İstanbul",
+   "bagli_il": "İstanbul"
+  },
+  {
+   "ad": "İzmir",
+   "slug": "izmir",
+   "lat": 38.4127,
+   "lon": 27.1384,
+   "tur": "il",
+   "bulunan": "İzmir",
+   "bagli_il": "İzmir"
+  },
+  {
+   "ad": "Kahramanmaraş",
+   "slug": "kahramanmaras",
+   "lat": 37.5847,
+   "lon": 36.9264,
+   "tur": "il",
+   "bulunan": "Kahramanmaraş",
+   "bagli_il": "Kahramanmaraş"
+  },
+  {
+   "ad": "Karabük",
+   "slug": "karabuk",
+   "lat": 41.2049,
+   "lon": 32.6277,
+   "tur": "il",
+   "bulunan": "Karabük",
+   "bagli_il": "Karabük"
+  },
+  {
+   "ad": "Karaman",
+   "slug": "karaman",
+   "lat": 37.1811,
+   "lon": 33.215,
+   "tur": "il",
+   "bulunan": "Karaman",
+   "bagli_il": "Karaman"
+  },
+  {
+   "ad": "Kars",
+   "slug": "kars",
+   "lat": 40.5983,
+   "lon": 43.0855,
+   "tur": "il",
+   "bulunan": "Kars",
+   "bagli_il": "Kars"
+  },
+  {
+   "ad": "Kastamonu",
+   "slug": "kastamonu",
+   "lat": 41.3781,
+   "lon": 33.7753,
+   "tur": "il",
+   "bulunan": "Kastamonu",
+   "bagli_il": "Kastamonu"
+  },
+  {
+   "ad": "Kayseri",
+   "slug": "kayseri",
+   "lat": 38.7322,
+   "lon": 35.4853,
+   "tur": "il",
+   "bulunan": "Kayseri",
+   "bagli_il": "Kayseri"
+  },
+  {
+   "ad": "Kilis",
+   "slug": "kilis",
+   "lat": 36.7161,
+   "lon": 37.115,
+   "tur": "il",
+   "bulunan": "Kilis",
+   "bagli_il": "Kilis"
+  },
+  {
+   "ad": "Kırıkkale",
+   "slug": "kirikkale",
+   "lat": 39.8453,
+   "lon": 33.5064,
+   "tur": "il",
+   "bulunan": "Kırıkkale",
+   "bagli_il": "Kırıkkale"
+  },
+  {
+   "ad": "Kırklareli",
+   "slug": "kirklareli",
+   "lat": 41.7351,
+   "lon": 27.2252,
+   "tur": "il",
+   "bulunan": "Kırklareli",
+   "bagli_il": "Kırklareli"
+  },
+  {
+   "ad": "Kırşehir",
+   "slug": "kirsehir",
+   "lat": 39.1458,
+   "lon": 34.1639,
+   "tur": "il",
+   "bulunan": "Kırşehir",
+   "bagli_il": "Kırşehir"
+  },
+  {
+   "ad": "Kocaeli",
+   "slug": "kocaeli",
+   "lat": 40.765,
+   "lon": 29.9293,
+   "tur": "il",
+   "bulunan": "İzmit",
+   "bagli_il": "Kocaeli"
+  },
+  {
+   "ad": "Konya",
+   "slug": "konya",
+   "lat": 37.8713,
+   "lon": 32.4846,
+   "tur": "il",
+   "bulunan": "Konya",
+   "bagli_il": "Konya"
+  },
+  {
+   "ad": "Kütahya",
+   "slug": "kutahya",
+   "lat": 39.4242,
+   "lon": 29.9833,
+   "tur": "il",
+   "bulunan": "Kütahya",
+   "bagli_il": "Kütahya"
+  },
+  {
+   "ad": "Malatya",
+   "slug": "malatya",
+   "lat": 38.3502,
+   "lon": 38.3167,
+   "tur": "il",
+   "bulunan": "Malatya",
+   "bagli_il": "Malatya"
+  },
+  {
+   "ad": "Manisa",
+   "slug": "manisa",
+   "lat": 38.612,
+   "lon": 27.4265,
+   "tur": "il",
+   "bulunan": "Manisa",
+   "bagli_il": "Manisa"
+  },
+  {
+   "ad": "Mardin",
+   "slug": "mardin",
+   "lat": 37.3131,
+   "lon": 40.7436,
+   "tur": "il",
+   "bulunan": "Mardin",
+   "bagli_il": "Mardin"
+  },
+  {
+   "ad": "Mersin",
+   "slug": "mersin",
+   "lat": 36.812,
+   "lon": 34.6389,
+   "tur": "il",
+   "bulunan": "Mersin",
+   "bagli_il": "Mersin"
+  },
+  {
+   "ad": "Muğla",
+   "slug": "mugla",
+   "lat": 37.2181,
+   "lon": 28.3665,
+   "tur": "il",
+   "bulunan": "Muğla",
+   "bagli_il": "Muğla"
+  },
+  {
+   "ad": "Muş",
+   "slug": "mus",
+   "lat": 38.7316,
+   "lon": 41.4848,
+   "tur": "il",
+   "bulunan": "Muş",
+   "bagli_il": "Muş"
+  },
+  {
+   "ad": "Nevşehir",
+   "slug": "nevsehir",
+   "lat": 38.625,
+   "lon": 34.7122,
+   "tur": "il",
+   "bulunan": "Nevşehir",
+   "bagli_il": "Nevşehir"
+  },
+  {
+   "ad": "Niğde",
+   "slug": "nigde",
+   "lat": 37.9658,
+   "lon": 34.6793,
+   "tur": "il",
+   "bulunan": "Niğde",
+   "bagli_il": "Niğde"
+  },
+  {
+   "ad": "Ordu",
+   "slug": "ordu",
+   "lat": 40.9778,
+   "lon": 37.8905,
+   "tur": "il",
+   "bulunan": "Ordu",
+   "bagli_il": "Ordu"
+  },
+  {
+   "ad": "Osmaniye",
+   "slug": "osmaniye",
+   "lat": 37.0742,
+   "lon": 36.2478,
+   "tur": "il",
+   "bulunan": "Osmaniye",
+   "bagli_il": "Osmaniye"
+  },
+  {
+   "ad": "Rize",
+   "slug": "rize",
+   "lat": 41.0208,
+   "lon": 40.5219,
+   "tur": "il",
+   "bulunan": "Rize",
+   "bagli_il": "Rize"
+  },
+  {
+   "ad": "Sakarya",
+   "slug": "sakarya",
+   "lat": 40.7806,
+   "lon": 30.4033,
+   "tur": "il",
+   "bulunan": "Adapazarı",
+   "bagli_il": "Sakarya"
+  },
+  {
+   "ad": "Samsun",
+   "slug": "samsun",
+   "lat": 41.2798,
+   "lon": 36.3361,
+   "tur": "il",
+   "bulunan": "Samsun",
+   "bagli_il": "Samsun İli"
+  },
+  {
+   "ad": "Şanlıurfa",
+   "slug": "sanliurfa",
+   "lat": 37.1671,
+   "lon": 38.7939,
+   "tur": "il",
+   "bulunan": "Şanlıurfa",
+   "bagli_il": "Şanlıurfa"
+  },
+  {
+   "ad": "Siirt",
+   "slug": "siirt",
+   "lat": 37.9293,
+   "lon": 41.9413,
+   "tur": "il",
+   "bulunan": "Siirt",
+   "bagli_il": "Siirt"
+  },
+  {
+   "ad": "Sinop",
+   "slug": "sinop",
+   "lat": 42.0268,
+   "lon": 35.1625,
+   "tur": "il",
+   "bulunan": "Sinop",
+   "bagli_il": "Sinop"
+  },
+  {
+   "ad": "Şırnak",
+   "slug": "sirnak",
+   "lat": 37.5139,
+   "lon": 42.4543,
+   "tur": "il",
+   "bulunan": "Şırnak",
+   "bagli_il": "Şırnak"
+  },
+  {
+   "ad": "Sivas",
+   "slug": "sivas",
+   "lat": 39.7483,
+   "lon": 37.0161,
+   "tur": "il",
+   "bulunan": "Sivas",
+   "bagli_il": "Sivas"
+  },
+  {
+   "ad": "Tekirdağ",
+   "slug": "tekirdag",
+   "lat": 40.9781,
+   "lon": 27.511,
+   "tur": "il",
+   "bulunan": "Tekirdağ",
+   "bagli_il": "Tekirdağ"
+  },
+  {
+   "ad": "Tokat",
+   "slug": "tokat",
+   "lat": 40.3139,
+   "lon": 36.5544,
+   "tur": "il",
+   "bulunan": "Tokat",
+   "bagli_il": "Tokat"
+  },
+  {
+   "ad": "Trabzon",
+   "slug": "trabzon",
+   "lat": 41.005,
+   "lon": 39.7269,
+   "tur": "il",
+   "bulunan": "Trabzon",
+   "bagli_il": "Trabzon"
+  },
+  {
+   "ad": "Tunceli",
+   "slug": "tunceli",
+   "lat": 39.0992,
+   "lon": 39.5435,
+   "tur": "il",
+   "bulunan": "Tunceli",
+   "bagli_il": "Tunceli"
+  },
+  {
+   "ad": "Uşak",
+   "slug": "usak",
+   "lat": 38.6735,
+   "lon": 29.4058,
+   "tur": "il",
+   "bulunan": "Uşak",
+   "bagli_il": "Uşak"
+  },
+  {
+   "ad": "Van",
+   "slug": "van",
+   "lat": 38.4946,
+   "lon": 43.3832,
+   "tur": "il",
+   "bulunan": "Van",
+   "bagli_il": "Van"
+  },
+  {
+   "ad": "Yalova",
+   "slug": "yalova",
+   "lat": 40.655,
+   "lon": 29.2769,
+   "tur": "il",
+   "bulunan": "Yalova",
+   "bagli_il": "Yalova"
+  },
+  {
+   "ad": "Yozgat",
+   "slug": "yozgat",
+   "lat": 39.82,
+   "lon": 34.8044,
+   "tur": "il",
+   "bulunan": "Yozgat",
+   "bagli_il": "Yozgat"
+  },
+  {
+   "ad": "Zonguldak",
+   "slug": "zonguldak",
+   "lat": 41.4514,
+   "lon": 31.7931,
+   "tur": "il",
+   "bulunan": "Zonguldak",
+   "bagli_il": "Zonguldak"
+  }
+ ]
+}
