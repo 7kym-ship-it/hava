@@ -52,6 +52,11 @@ DAKIKALIK_ADET = 48                   # 48 x 15 dk = 12 saat ileri
 GUN = 14
 SAAT_DILIMI = "Europe/Istanbul"       # Turkiye tek dilim, yaz saati yok
 
+# Katmanli yenileme: her saat her yeri cekmek gunluk siniri asiyor.
+# Il merkezleri sik, ilceler seyrek yenilenir. Saat UTC'ye gore.
+PERIYOT_TAHMIN = {"il": 1, "ilce": 6}      # kac saatte bir tahmin
+PERIYOT_KALITE = {"il": 3, "ilce": 12}     # kac saatte bir hava kalitesi
+
 TAHMIN_OBEK = 150      # tek istekteki konum sayisi (olcumde 200 calisti, pay biraktik)
 KALITE_OBEK = 300
 OBEK_BEKLE = 25        # saniye; dakikalik 600 sinirinin altinda kalmak icin
@@ -167,25 +172,64 @@ def main():
         return 1
 
     konumlar = json.load(open(kaynak, encoding="utf-8"))["konumlar"]
-    print(f"{len(konumlar)} konum icin veri cekiliyor\n", flush=True)
+    saat = datetime.now(timezone.utc).hour
+    hepsini_cek = "--hepsi" in sys.argv
+
+    def dosya_yolu(slug):
+        return os.path.join(site, "il", slug + ".json")
+
+    # Vakti gelenleri ve dosyasi hic olmayanlari sec.
+    # Onbellekten gelen eski dosyalar yerinde kalir, silinmez.
+    tahmin_listesi, kalite_listesi, eksik = [], [], 0
+    for k in konumlar:
+        tur = k.get("tur", "il")
+        yok = not os.path.exists(dosya_yolu(k["slug"]))
+        if yok:
+            eksik += 1
+        pt = PERIYOT_TAHMIN.get(tur, 1)
+        pk = PERIYOT_KALITE.get(tur, 3)
+        if hepsini_cek or yok or saat % pt == 0:
+            tahmin_listesi.append(k)
+            if hepsini_cek or yok or saat % pk == 0:
+                kalite_listesi.append(k)
+
+    print(f"Toplam konum   : {len(konumlar)}")
+    print(f"Saat (UTC)     : {saat}")
+    print(f"Dosyasi yok    : {eksik}")
+    print(f"Tahmin cekilecek      : {len(tahmin_listesi)}")
+    print(f"Hava kalitesi cekilecek: {len(kalite_listesi)}\n", flush=True)
 
     basla = time.time()
-    tahminler = tahmin_cek(konumlar)
-    kaliteler = kalite_cek(konumlar)
+    tahminler = tahmin_cek(tahmin_listesi) if tahmin_listesi else {}
+    kaliteler = kalite_cek(kalite_listesi) if kalite_listesi else {}
 
     simdi = datetime.now(timezone.utc).isoformat(timespec="seconds")
     toplam_bayt = 0
     yazilan = 0
+    korunan = 0
+    def eski_aqi(slug):
+        """Bu tur hava kalitesi cekilmediyse onceki degeri koru."""
+        try:
+            with open(dosya_yolu(slug), encoding="utf-8") as f:
+                return json.load(f).get("aqi")
+        except Exception:
+            return None
+
     for k in konumlar:
         t = tahminler.get(k["slug"])
         if not t:
-            print(f"  UYARI: {k['ad']} icin veri yok, atlandi")
+            # Bu tur yenilenmedi: onbellekten gelen dosya oldugu gibi kalsin.
+            if os.path.exists(dosya_yolu(k["slug"])):
+                toplam_bayt += os.path.getsize(dosya_yolu(k["slug"]))
+                korunan += 1
+            else:
+                print(f"  UYARI: {k['ad']} icin veri yok")
             continue
-        t["aqi"] = kaliteler.get(k["slug"])
+        t["aqi"] = kaliteler[k["slug"]] if k["slug"] in kaliteler else eski_aqi(k["slug"])
         t["ad"] = k["ad"]
         t["slug"] = k["slug"]
         t["guncelleme"] = simdi
-        toplam_bayt += yaz(os.path.join(site, "il", k["slug"] + ".json"), t)
+        toplam_bayt += yaz(dosya_yolu(k["slug"]), t)
         yazilan += 1
 
     # Uygulamanin en yakin yeri bulmak icin kullanacagi dizin
@@ -198,7 +242,10 @@ def main():
     durum = {
         "surum": 1,
         "guncelleme": simdi,
-        "konum_sayisi": yazilan,
+        "konum_sayisi": yazilan + korunan,
+        "yenilenen": yazilan,
+        "onbellekten": korunan,
+        "saat_utc": saat,
         "harcanan_konum_cagrisi": _sayac["konum"],
         "http_istegi": _sayac["istek"],
         "sinir_429": _sayac["429"],
@@ -209,14 +256,15 @@ def main():
     yaz(os.path.join(site, "durum.json"), durum)
 
     print("\n" + "=" * 50)
-    print(f"yazilan dosya   : {yazilan}")
+    print(f"yenilenen dosya : {yazilan}")
+    print(f"onbellekten     : {korunan}")
     print(f"toplam boyut    : {toplam_bayt/1024:.0f} KB")
-    print(f"ortalama dosya  : {toplam_bayt/max(1,yazilan)/1024:.1f} KB")
+    print(f"ortalama dosya  : {toplam_bayt/max(1,yazilan+korunan)/1024:.1f} KB")
     print(f"harcanan cagri  : {_sayac['konum']} konum / {_sayac['istek']} istek")
     print(f"429 sayisi      : {_sayac['429']}")
     print(f"sure            : {sure:.1f} sn")
-    if yazilan < len(konumlar):
-        print(f"UYARI: {len(konumlar)-yazilan} konum eksik")
+    if yazilan + korunan < len(konumlar):
+        print(f"UYARI: {len(konumlar)-yazilan-korunan} konum eksik")
         return 1
     return 0
 
