@@ -44,6 +44,11 @@ GUNLUK = ("temperature_2m_max,temperature_2m_min,weather_code,wind_speed_10m_max
           "relative_humidity_2m_max,relative_humidity_2m_min,sunrise,sunset,"
           "precipitation_sum,uv_index_max,precipitation_probability_max")
 
+# Arka plan yagmur/kar bildirimi icin 15 dakikalik dilimler.
+# (Turkiye'de bu veri saatlikten turetiliyor, uygulamadaki mevcut durumla ayni.)
+DAKIKALIK = "weather_code,precipitation"
+DAKIKALIK_ADET = 48                   # 48 x 15 dk = 12 saat ileri
+
 GUN = 14
 SAAT_DILIMI = "Europe/Istanbul"       # Turkiye tek dilim, yaz saati yok
 
@@ -105,6 +110,7 @@ def tahmin_cek(konumlar):
         lon = ",".join(str(k["lon"]) for k in obek)
         url = (f"{TAHMIN}?latitude={lat}&longitude={lon}"
                f"&current={SIMDI}&hourly={SAATLIK}&daily={GUNLUK}"
+               f"&minutely_15={DAKIKALIK}&forecast_minutely_15={DAKIKALIK_ADET}"
                f"&timezone={urllib.parse.quote(SAAT_DILIMI)}&forecast_days={GUN}")
         print(f"  tahmin obek {n}/{len(obekler)} ({len(obek)} konum)", flush=True)
         cevap = _liste(_oku(url), len(obek))
