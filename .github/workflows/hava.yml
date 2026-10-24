@@ -1,0 +1,45 @@
+name: hava
+
+on:
+  schedule:
+    - cron: '7 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  uret:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Hava verisini cek
+        run: python hava.py
+
+      - name: Ozet
+        run: cat site/v1/durum.json
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  yayinla:
+    needs: uret
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.dagit.outputs.page_url }}
+    steps:
+      - id: dagit
+        uses: actions/deploy-pages@v4
