@@ -24,6 +24,16 @@ jobs:
         with:
           python-version: '3.12'
 
+      # Onceki calismanin urettigi dosyalari geri getirir.
+      # Bu olmazsa, o saat yenilenmeyen ilce dosyalari siteden kaybolur.
+      - name: Onceki site dosyalarini getir
+        uses: actions/cache@v4
+        with:
+          path: site
+          key: site-${{ github.run_id }}
+          restore-keys: |
+            site-
+
       - name: Hava verisini cek
         run: python hava.py
 
